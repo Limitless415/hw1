@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Haunted House </title>
+        <link rel="icon" href="images/ghost-emoji.png"/>
+        <link href='styling.css' rel="stylesheet">
+    </head>
+    <body>
+        <h1> Bedroom </h1>
+        <hr>
+        <p> You and your friends go up the stairs and hear something coming from a bedroom and check it out. 
+           <br> Your group notices a person cleaning blood off a knife and a body next to him.
+            
+        </p>
+        <img src="images/serial-killer.png" height="480" class="images">
+        <br>
+        <div>
+            <label> What will your group do? 
+                <br> Fight or flight: </label>
+            <input type="text" id='inputText'>
+            <input type="button" value='Submit' onclick="flight()">
+        </div>
+
+        <script>
+        function flight() {
+            if (inputText.value == 'flight') {
+                document.body.innerHTML = (
+                    `<h1> Flight </h1>
+                    <hr>
+                    <img src='images/sneaking.gif' class='images'>
+                    <p> Your group slowly gets away without alerting the person and return to the lobby </p>
+                    <li> <a href='house.html'> <button> Return to lobby </button> </a> </li>
+                    <audio autoplay>
+                    <source src="audio/sneaky.mp3">
+                    </audio> `
+                )
+                
+            }
+            else if (inputText.value == 'knife') {
+                document.body.innerHTML = (
+                    `<h1> Knife fight </h1>
+                    <p> Your group uses the knife that you guys picked up in the kitchen to fight 
+                    and overpower the serial killer, stabbing him. <br>
+                    Your group decides killing him would make you all murderers, so you stop his bleeding.
+                    </p>
+                    <img src='images/knife-fight.gif' width="720" class="images">
+                    <br>
+                    <li> <a href="heroicending.html"> <button> Proceed </button> </a> </li>
+                    <audio autoplay>
+                    <source src="audio/knife.mp3">
+                    </audio>`
+                )
+            }
+
+            else if (inputText.value == 'pan') {
+                document.body.innerHTML = (
+                    `<h1> Frying pan </h1>
+                    <hr>
+                    <p> Your group uses the frying pan that you guys picked up in the kitchen to fight 
+                    and knock out the serial killer.
+                    </p>
+                    <img src='images/pan.gif' width="720" class="images">
+                    <br>
+                    <li> <a href="heroicending.html"> <button> Proceed </button> </a> </li>
+                    <audio autoplay>
+                    <source src="audio/bonk.mp3">
+                    </audio>`
+                )
+            }
+
+            else {
+                document.body.innerHTML = (
+                    `<h1> The wrong choice </h1>
+                    <img src='images/dead.png' class="images">
+                    <p> Your group tries to fight him off without a weapon, but he overpowers you with his weapon and you all die.</p>
+                    <a href="index.html"> <h4> Reset </h4> </a>
+                    <audio autoplay>
+                    <source src="audio/among-us-death.mp3">
+                    </audio>`
+                )
+            }
+            
+        }
+        </script>
+    </body>
+</html>

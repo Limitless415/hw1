@@ -1,0 +1,55 @@
+body {
+    background-color: rgb(24, 21, 21);
+}
+
+.images {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: 'Arial';
+    font-size: 20px;
+    text-align: center;
+    color:white;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    position: center;
+    height: 25px;
+}
+
+h4 {
+    color: white;
+    text-align: center;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    justify-content: center;
+}
+
+label {
+    color: red;
+}
