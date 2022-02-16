@@ -31,6 +31,12 @@ li {
     justify-content: center;
 }
 
+table, tr, td {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 button {
     position: center;
     height: 25px;
